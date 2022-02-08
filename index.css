@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;    
+}
+
+body {
+    background-color:  hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.windown{
+    margin: 10em 10em 10em 10em;
+}
+
+.contrianer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /*border: 2px solid red ;*/ 
+    grid-template-areas:  
+        "inform picture";
+    border-radius:10px;  
+    overflow: hidden;
+    
+   
+    
+}
+
+.pic{
+    background-color: hsl(277, 64%, 61%);
+    grid-area: picture;
+    
+}
+.pic img{  
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    mix-blend-mode: hard-light;
+
+}
+
+.information{
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: inform;
+    
+    /*justify-content: center;*/
+    
+}
+
+.header h1{
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    margin: 70px 100px 0 50px;
+    text-align: left;
+}
+h1 span{
+    color: hsl(277, 64%, 61%);
+    font-weight: 700;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.header p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 12px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    margin: 30px 150px 0 50px;
+    text-align: left;
+}
+
+.card-information{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 80px 100px 70px 50px;
+}
+
+.card-information div{
+    margin: 0 50px 0 0;
+}
+
+.card-information div h2{
+    color: hsl(0, 0%, 100%);
+    font-family: 'Inter', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card-information div p{
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 12px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width:960px) {
+
+    .windown{
+        width: 375px ;
+       
+    }
+    .contrianer{
+
+        grid-template-columns: none;
+        grid-template-rows: 1fr auto;
+        grid-template-areas:  
+        "picture"
+        "inform";
+        
+        
+    }
+
+    .card-information{
+        grid-template-columns: none;
+        grid-template-rows: 33% 33% 33%;
+    }
+    .header h1{
+        font-size: 2.25rem;
+        text-align: center;
+        margin: 1.25em 0.75em 0 0.75em;
+    }
+    h1 span{
+        font-size: 2.25rem;
+    }
+    
+    .header p{
+        color: hsla(0, 0%, 100%, 0.75);
+        font-size: 1.1rem;
+        font-family: 'Lexend Deca', sans-serif;
+        font-weight: 400;
+        margin: 1.25em 2.5em 0 2.5em;
+        text-align: center;
+    }
+    .card-information{
+        margin: 4em 0 0 0 ;
+    }
+    
+    .card-information div {
+        margin: 0 0 3em 0 ;
+    }
+    
+    .card-information div h2{
+        text-align: center;
+    }
+    
+    .card-information div p{
+        font-size: 1rem;
+        text-align: center;
+    }
+}
